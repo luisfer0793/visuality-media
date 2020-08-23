@@ -1,0 +1,24 @@
+.services-bar {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-bar__item {
+  position: relative;
+  padding: 0 1rem;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.services-bar__item:not(:first-child)::before {
+  position: absolute;
+  content: '';
+  top: 45%;
+  left: 0;
+  height: .3rem;
+  width: .3rem;
+  border-radius: .5rem;
+  background-color: #FF4E10;
+}
