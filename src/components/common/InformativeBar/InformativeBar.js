@@ -6,7 +6,7 @@ import {faInstagram} from '@fortawesome/free-brands-svg-icons/faInstagram';
 import {faYoutube} from '@fortawesome/free-brands-svg-icons/faYoutube';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons/faEnvelope';
 
-import ServicesBar from '../ServicesBar/ServicesBar';
+import ServicesBar from 'components/common/ServicesBar/ServicesBar';
 
 import './InformativeBar.css';
 

@@ -1,4 +1,8 @@
-.button {
+import React from 'react';
+
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
   display: inline-block;
   padding: 1.5rem 3.7rem 1.5rem 3rem;
   width: min-content;
@@ -15,4 +19,12 @@
   cursor: pointer;
   box-shadow: .5rem 1rem #656565;
   background: linear-gradient(to right, #FF4E10, #FF762A);
-}
+`;
+
+const Button = ({ text }) => (
+  <StyledButton>
+    {text}
+  </StyledButton>
+);
+
+export default Button;
