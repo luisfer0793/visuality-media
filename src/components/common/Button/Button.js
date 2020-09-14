@@ -1,11 +1,10 @@
 import React from 'react';
-
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
   display: inline-block;
   padding: 1.5rem 3.7rem 1.5rem 3rem;
-  width: min-content;
+  width: ${ props => props.small ? 'min-content' : 'auto' };
   font-family: Lato, sans-serif;
   font-weight: 700;
   font-size: 4rem;
@@ -21,8 +20,8 @@ const StyledButton = styled.button`
   background: linear-gradient(to right, #FF4E10, #FF762A);
 `;
 
-const Button = ({ text }) => (
-  <StyledButton>
+const Button = ({ text, small}) => (
+  <StyledButton small={small}>
     {text}
   </StyledButton>
 );

@@ -1,5 +1,5 @@
-import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import React, { useState }from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Button from 'components/common/Button/Button';
 import Navbar from 'components/common/Navbar/Navbar';
@@ -42,55 +42,48 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      links: [
-        { 
-          title: 'Recepción', 
-          to: '/recepcion' 
-        }, 
-        { 
-          title: 'Logo', 
-          to: '/home' 
-        }, 
-        { 
-          title: 'Adventure', 
-          to: '/adventure' 
-        }, 
-        { 
-          title: 'Blog', 
-          to: '/blog' 
-        }, 
-        { 
-          title: 'Shop', 
-          to: '/shop' 
-        }, 
-      ]
-    };
-  }
+const App = props => {
+  const [links, setLinks] = useState([
+    { 
+      title: 'Recepción', 
+      to: '/recepcion' 
+    }, 
+    { 
+      title: 'Logo', 
+      to: '/home' 
+    }, 
+    { 
+      title: 'Adventure', 
+      to: '/adventure' 
+    }, 
+    { 
+      title: 'Blog', 
+      to: '/blog' 
+    }, 
+    { 
+      title: 'Shop', 
+      to: '/shop' 
+    },
+  ]);
 
-  render() {
-    return (
-      <Router>
-        <GlobalStyle/>
-        <main className="App">
-          <header className="AppInformativeBar">
-            <InformativeBar />
-          </header>
-          <Navbar links={this.state.links} ambient="dark"/>
-          <section className="AppHeadingSection">
-            <div className="AppHeadingContainer">
-              <p className="AppHeading">¿A qué mercado del mundo quieres llegar?</p>
-              <p className="AppHeading AppHeadingBold">Somos estrategas del marketing listos para volar.</p>
-            </div>
-            <Button text="Custom Flight"/>
-          </section>
-        </main>
-      </Router>
-    );
-  }
-}
+  return (
+    <Router>
+      <GlobalStyle/>
+      <main className="App">
+        <header className="AppInformativeBar">
+          <InformativeBar />
+        </header>
+        <Navbar links={links} isDark="true"/>
+        <section className="AppHeadingSection">
+          <div className="AppHeadingContainer">
+            <p className="AppHeading">¿A qué mercado del mundo quieres llegar?</p>
+            <p className="AppHeading AppHeadingBold">Somos estrategas del marketing listos para volar.</p>
+          </div>
+          <Button text="Custom Flight" small="true"/>
+        </section>
+      </main>
+    </Router>
+  );
+};
 
 export default App;
