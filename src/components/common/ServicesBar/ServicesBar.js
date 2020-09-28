@@ -1,19 +1,40 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import './ServicesBar.css';
+const StyledServicesBar = styled.ul`
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+`;
 
-const services = ['design', 'video', 'media', 'mkt', 'strategist', 'magicians'];
+const StyledServicesBarItem = styled.li`
+  position: relative;
+  padding: 0 1rem;
+  font-style: italic;
+  color: #ffffff;
+  &:not(:first-child)::before {
+    position: absolute;
+    content: '';
+    top: 45%;
+    left: 0;
+    height: .3rem;
+    width: .3rem;
+    border-radius: .5rem;
+    background-color: #FF4E10;
+  }
+`;
 
-const ServicesBar = props => {
-  return (
-    <ul className="services-bar">
-      {services.map(service => (
-        <li key={service} className="services-bar__item">
-          {service}
-        </li>
-      ))}
-    </ul>
-  );
-};
+const services = ['diseño', 'video', 'redes sociales', 'marketing digital', 'estrategia'];
+
+const ServicesBar = props => (
+  <StyledServicesBar>
+    {services.map(service => (
+      <StyledServicesBarItem key={service}>
+        {service}
+      </StyledServicesBarItem>
+    ))}
+  </StyledServicesBar>
+);
 
 export default ServicesBar;

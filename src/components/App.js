@@ -1,19 +1,13 @@
-import React, { useState }from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Button from 'components/common/Button/Button';
 import Navbar from 'components/common/Navbar/Navbar';
-import InformativeBar from 'components/common/InformativeBar/InformativeBar';
+import Hero from 'components/layout/Hero/Hero';
+import Main from 'components/layout/Main/Main'
 
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  .App {
-    min-height: 100vh;
-    padding: 3rem 4rem;
-    background-color: #000000;
-  }
-
   .AppHeading {
     font-weight: 300;
     font-size: 4rem;
@@ -43,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = props => {
-  const [links, setLinks] = useState([
+  const links = [
     { 
       title: 'Recepción', 
       to: '/recepcion' 
@@ -53,35 +47,30 @@ const App = props => {
       to: '/home' 
     }, 
     { 
-      title: 'Adventure', 
-      to: '/adventure' 
+      title: 'Apoyo Social', 
+      to: '/apoyo-social' 
+    }, 
+    { 
+      title: 'Proyectos', 
+      to: '/proyectos' 
     }, 
     { 
       title: 'Blog', 
       to: '/blog' 
-    }, 
-    { 
-      title: 'Shop', 
-      to: '/shop' 
     },
-  ]);
+  ];
 
   return (
     <Router>
-      <GlobalStyle/>
-      <main className="App">
-        <header className="AppInformativeBar">
-          <InformativeBar />
-        </header>
-        <Navbar links={links} isDark="true"/>
-        <section className="AppHeadingSection">
-          <div className="AppHeadingContainer">
-            <p className="AppHeading">¿A qué mercado del mundo quieres llegar?</p>
-            <p className="AppHeading AppHeadingBold">Somos estrategas del marketing listos para volar.</p>
-          </div>
-          <Button text="Custom Flight" small="true"/>
-        </section>
-      </main>
+      <GlobalStyle />
+      <Hero>
+        <Navbar 
+          links={links} 
+          variant="dark"
+        />
+        <Main/>
+      </Hero>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quisquam dolores laborum aliquam quaerat quas eos fuga ea nesciunt rem quam corrupti. Placeat ducimus, ex maxime voluptate quibusdam, suscipit possimus doloribus alias fuga maiores dolores! Blanditiis, quaerat. Quidem ad voluptas, esse iusto, amet dolorum eaque dolores, sunt ex repellendus reprehenderit!</p>
     </Router>
   );
 };

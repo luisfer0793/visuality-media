@@ -1,25 +1,73 @@
 @font-face {
   font-family: 'Lato';
-  src: local('Lato'), url(./assets/fonts/Lato/Lato-Light.ttf) format('truetype');
+  src: local('Lato'), 
+        url(./assets/fonts/Lato/Lato-Light.ttf)
+        format('truetype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: local('Lato'), url(./assets/fonts/Lato/Lato-Regular.ttf) format('truetype');
+  src: local('Lato'), 
+        url(./assets/fonts/Lato/Lato-Regular.ttf)
+        format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: local('Lato'), url(./assets/fonts/Lato/Lato-Bold.ttf) format('truetype');
+  src: local('Lato'), 
+        url(./assets/fonts/Lato/Lato-Bold.ttf)
+        format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: local('Lato'), url(./assets/fonts/Lato/Lato-Black.ttf) format('truetype');
+  src: local('Lato'),
+        url(./assets/fonts/Lato/Lato-Black.ttf)
+        format('truetype');
   font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: local('Panton'),
+        url(./assets/fonts/Panton/Panton-Light.ttf)
+        format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: local('Panton'),
+        url(./assets/fonts/Panton/Panton-Regular.ttf)
+        format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: local('Panton'),
+        url(./assets/fonts/Panton/Panton-SemiBold.ttf)
+        format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: local('Panton'),
+        url(./assets/fonts/Panton/Panton-Bold.ttf)
+        format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: local('Panton'),
+        url(./assets/fonts/Panton/Panton-Black.ttf)
+        format('truetype');
+  font-weight: 800;
 }
 
 *,

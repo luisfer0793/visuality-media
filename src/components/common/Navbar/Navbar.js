@@ -26,7 +26,7 @@ const StyledList = styled.ul`
     content: '';
     left: 0;
     bottom: 0;
-    background-color: ${ props => props.isDark ? '#832804' : '#f8a47f' };
+    background-color: ${ props => props.variant ? '#832804' : '#f8a47f' };
   }
 `;
 
@@ -41,15 +41,16 @@ const StyledListItem = styled.li`
   }
 `;
 
-const Navbar = ({ links, isDark }) => {
+// TODO: realizar el enlazado de los props.
+const Navbar = ({ links, variant }) => {
   const {pathname} = useLocation();
 
   return (
     <StyledNavbar>
-      <StyledList isDark={isDark}>
+      <StyledList variant={variant}>
         {links.map(link => (
           <StyledListItem key={link.title}>
-              <LinkRef to={link.to} isDark={isDark} isActive={pathname === link.to}>
+              <LinkRef to={link.to} variant={variant} isActive={pathname === link.to}>
                 {link.title}
               </LinkRef>
           </StyledListItem>
