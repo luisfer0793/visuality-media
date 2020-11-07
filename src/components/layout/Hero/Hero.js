@@ -5,16 +5,18 @@ import styled from 'styled-components';
 import bgImage from 'assets/images/bg-hero.svg';
 
 const StyledHero = styled.div`
+  padding: 3.5rem;
   min-height: 100vh;
-  background-image: url('../../../assets/images/bg-hero.svg');
-  background-color: #0f0f0f;
-  border-radius: 0 0 5rem 5rem;
+  background-image: url(${bgImage});
+  background-color: #161616;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
-const Hero = ({ children }) => (
+const Hero = ({children}) => (
   <StyledHero>
-    { children }
-    <img src={bgImage} alt=""/>
+    {children}
   </StyledHero>
 );
 

@@ -20,7 +20,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${ props => props.variant ? '#ffffff' : '#000000' };
   border-radius: 1rem 1rem 0 0;
-  transition: background-color linear 250ms;
+  transition: background-color linear 200ms;
   &::after {
     position: absolute;
     width: 100%;
@@ -32,7 +32,7 @@ const StyledLink = styled(Link)`
     border-radius: 1rem;
     background-color: #ff4e10;
     opacity: 0;
-    transition: opacity linear 250ms;
+    transition: opacity linear 200ms;
   }
   &:hover {
     background-color: ${ props => props.variant ? '#320f01' : '#f1cfc0' };

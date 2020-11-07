@@ -41,7 +41,6 @@ const StyledListItem = styled.li`
   }
 `;
 
-// TODO: realizar el enlazado de los props.
 const Navbar = ({ links, variant }) => {
   const {pathname} = useLocation();
 
