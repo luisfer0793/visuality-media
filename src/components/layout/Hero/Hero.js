@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import bgImage from 'assets/images/bg-hero.svg';
 
 const StyledHero = styled.div`
-  padding: 3.5rem;
+  padding: 4.5rem;
   min-height: 100vh;
   background-image: url(${bgImage});
   background-color: #161616;

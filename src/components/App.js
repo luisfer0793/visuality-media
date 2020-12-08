@@ -5,6 +5,8 @@ import Navbar from 'components/common/Navbar/Navbar';
 import Hero from 'components/layout/Hero/Hero';
 import Main from 'components/layout/Main/Main'
 
+import Carousel from 'components/common/Carousel/Carousel';
+
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -64,11 +66,13 @@ const App = props => {
     <Router>
       <GlobalStyle />
       <Hero>
-        <Navbar 
-          links={links} 
-          variant="dark"
-        />
+        <Navbar links={links} variant="dark"/>
         <Main/>
+        <Carousel>
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+        </Carousel>
       </Hero>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quisquam dolores laborum aliquam quaerat quas eos fuga ea nesciunt rem quam corrupti. Placeat ducimus, ex maxime voluptate quibusdam, suscipit possimus doloribus alias fuga maiores dolores! Blanditiis, quaerat. Quidem ad voluptas, esse iusto, amet dolorum eaque dolores, sunt ex repellendus reprehenderit!</p>
     </Router>

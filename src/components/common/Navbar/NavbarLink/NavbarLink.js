@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 
 const Link = ({isActive, variant, children, ...props}) => (
   <RouterLink {...props}>
@@ -14,7 +14,7 @@ const StyledLink = styled(Link)`
   padding: 1.5rem;
   font-family: 'Panton', sans-serif;
   font-weight: ${ props => props.isActive ? 800 : 300 };
-  font-size: 4rem;
+  font-size: 3rem;
   font-style: italic;
   text-transform: uppercase;
   text-decoration: none;

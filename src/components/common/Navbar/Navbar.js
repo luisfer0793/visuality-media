@@ -41,6 +41,11 @@ const StyledListItem = styled.li`
   }
 `;
 
+const StyledLogo = styled.img`
+  display: block;
+  width: 25rem;
+`;
+
 const Navbar = ({ links, variant }) => {
   const {pathname} = useLocation();
 
@@ -55,7 +60,7 @@ const Navbar = ({ links, variant }) => {
           </StyledListItem>
         ))}
       </StyledList>
-      <img className="navbar__logo" src={logoComplete} alt="navbar-logo"/>
+      <StyledLogo src={logoComplete} alt="navbar-logo"/>
     </StyledNavbar>
   );
 };
